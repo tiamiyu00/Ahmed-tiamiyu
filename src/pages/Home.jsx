@@ -1,5 +1,11 @@
 import React from 'react';
-
+import gitlink from '/img/Logo/github.png';
+import linkdinLink from '/img/Logo/linkedin.png';
+import xLink from '/img/Logo/x.png';
+import emailLink from '/img/Logo/at.png';
+import image from '/img/images/img.png'
+import black from '/img/images/SeparatorBlack.png'
+import white from '/img/images/SeparatorWhite.png'
 function Home() {
     return (
         <div className='bg-slate-200 font-mono sm:bg-transparent sm:mt-16'>
@@ -12,18 +18,18 @@ function Home() {
                         <h1 className=' font-extrabold text-xl tracking-wider '>Tiamiyu Olamide Ahmed</h1>
                         <p className='text-sm font-bold text-slate-400 sm:px-6 sm:pt-6 tracking-tight'>Software-Dev / Frontend-Dev</p>
                     </div>
-                    <div className="flex py-5 sm:px-9 sm:py-4 space-x-4 ">
+                    <div className="flex   py-5 sm:px-5 sm:py-4 space-x-4">
                         
-                        <a href=""> <img className='w-8' src="./src/assets/images/Logo/github.png" alt="GitHub" /></a>
-                        <a href=""> <img className='w-8' src="./src/assets/images/Logo/linkedin.png" alt="LinkedIn" /></a>
-                        <a href=""> <img className='w-8' src="./src/assets/images/Logo/X.png" alt="X" /></a>
-                        <a href=""> <img className='w-8' src="./src/assets/images/Logo/at.png" alt="Email" /></a>
+                        <a href=""> <img className='icon w-11' src={gitlink} alt="GitHub" /></a>
+                        <a href=""> <img className='icon w-11' src={linkdinLink}  alt="LinkedIn" /></a>
+                        <a href=""> <img className='icon w-11' src={xLink}  alt="X" /></a>
+                        <a href=""> <img className='icon w-11' src={emailLink}  alt="Email" /></a>
                     </div>
                 </div>
 
                 <div className="bg-black sm:bg-transparent flex justify-center my-4 pt-5  sm:flex sm:justify-end sm:ml-0 sm:w-1/2 sm:mr-16 sm:-mt-16"> 
                 
-                    <img className=' w-60' src="./src/assets/images/img.png" alt="Profile" />
+                    <img className=' w-60' src={image}  alt="Profile" />
                 </div> 
               
 
@@ -39,7 +45,7 @@ function Home() {
                     time has been enough to confirm my place in the industry.
                 </p>
                 <div className="my-2 flex justify-center">
-                    <img src="./src/assets/images/separatorBlack.png" alt="Separator" />
+                    <img src={black} alt="Separator" />
                 </div>
             </div>
 
@@ -54,7 +60,7 @@ function Home() {
                     for the sixth time. Working in the club as a Front-End Developer has definitely given me valuable experience.
                 </p>
                 <div className="my-2 flex justify-center">
-                    <img src="./src/assets/images/separatorWhite.png" alt="Separator" />
+                    <img src={white} alt="Separator" />
                 </div>
             </div>
         </div>

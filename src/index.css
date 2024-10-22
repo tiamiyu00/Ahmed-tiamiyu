@@ -9,7 +9,7 @@
 }
 
 .icon{
-  @apply border-2 shadow-md bg-slate-100 mr-3 p-1 rounded-md;
+  @apply border-2 shadow-md bg-slate-100 mr-2 p-1 rounded-md;
 }
 .bgimage{
   @apply bg-cover bg-center p-3 m-0;

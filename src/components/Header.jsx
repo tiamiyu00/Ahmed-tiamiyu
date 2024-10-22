@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-
+import talogo from '//img/Logo/talogo.png';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('');
@@ -37,7 +37,8 @@ function Header() {
     <header className='bg-slate-200 sm:bg-transparent relative sm:mb-10'>
       <div className="flex justify-between items-center py-4 px-4   sm:pl-20">
         <div className="flex justify-center">
-          <img className='w-16 h-15 sm:w-42 sm:h-35' src='./src/assets/images/Logo/talogo.png' alt="Logo" />
+        <img className='w-16 h-15 sm:w-42 sm:h-35' src={talogo} alt="Logo" />
+          
         </div>
         <div className="sm:hidden">
           <button ref={menuButtonRef} onClick={toggleMenu} className="focus:outline-none">
