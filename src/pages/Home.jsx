@@ -1,11 +1,11 @@
 import React from 'react';
-import gitlink from '/img/Logo/github.png';
+import gitlink from '/public/img/Logo/github.png';
 import linkdinLink from '/img/Logo/linkedin.png';
-import xLink from '/img/Logo/x.png';
+import xLink from '/img/Logo/Xlink.png';
 import emailLink from '/img/Logo/at.png';
 import image from '/img/images/img.png'
-import black from '/img/images/SeparatorBlack.png'
-import white from '/img/images/SeparatorWhite.png'
+import black from '/img/images/separatorBlack.png'
+import white from '/img/images/separatorWhite.png'
 function Home() {
     return (
         <div className='bg-slate-200 font-mono sm:bg-transparent sm:mt-16'>
@@ -35,9 +35,9 @@ function Home() {
 
             </div>
 
-            <div className="py-6 px-14 mt-12">
-                <div className="flex justify-center">
-                    <h1 className='p-2 border-4 border-black font-bold tracking-widest'>ABOUT ME</h1>
+            <div className="py-6 px-14 mt-12 sm:mx-20">
+                <div className="flex justify-center ">
+                    <h1 className='p-2 sm: mt-20 border-4 border-black font-bold tracking-widest'>ABOUT ME</h1>
                 </div>
                 <p className='py-5'>
                     My name is Tiamiyu Olamide Ahmed. I'm a final-year Accounting student.
@@ -49,11 +49,11 @@ function Home() {
                 </div>
             </div>
 
-            <div className="bgimage py-6 px-14 text-white">
-                <div className="flex justify-center">
+            <div className="bgimage py-6 px-14 text-white ">
+                <div className="flex justify-center ">
                     <h1 className='font-bold tracking-wide'>Software Developer</h1>
                 </div>
-                <p className='py-5'>
+                <p className='py-5 px-36'>
                     I am a member of a science club that brings together enthusiasts of the Internet and new technologies. 
                     At ITberries, we design and develop websites and web applications following agile methodology. 
                     Apart from the projects, our biggest undertaking is the Ciemna Strona UX conference, which we are organizing 

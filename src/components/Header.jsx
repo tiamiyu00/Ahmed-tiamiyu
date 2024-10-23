@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import talogo from '//img/Logo/talogo.png';
+import talogo from '/public/img/Logo/talogo.png';
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('');
