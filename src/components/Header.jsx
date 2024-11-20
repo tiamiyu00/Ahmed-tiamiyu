@@ -34,13 +34,13 @@ function Header() {
   };
 
   return (
-    <header className='bg-slate-200 sm:bg-transparent relative sm:mb-10'>
+    <header className='bg-slate-200 md:bg-transparent relative md:mb-10'>
       <div className="flex justify-between items-center py-4 px-4   sm:pl-20">
         <div className="flex justify-center">
         <img className='w-16 h-15 sm:w-42 sm:h-35' src={talogo} alt="Logo" />
           
         </div>
-        <div className="sm:hidden">
+        <div className="md:hidden">
           <button ref={menuButtonRef} onClick={toggleMenu} className="focus:outline-none">
             <svg className="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -48,7 +48,7 @@ function Header() {
           </button>
         </div>
 
-        <div className="hidden sm:flex sm:justify-center w-2/5">
+        <div className="hidden md:flex md:justify-center w-2/5">
           <a href="#about" className="text-white pr-5 hover:text-gray-700">About</a>
           <a href="#projects" className="text-white pr-5 hover:text-gray-700">Projects</a>
           <a href="#contact" className="text-white pr-5 hover:text-gray-700">Contact</a>
@@ -58,7 +58,7 @@ function Header() {
 
 
       {isOpen && (
-        <div className="absolute top-[4rem] right-0 w-1/2 bg-black text-white sm:hidden" ref={dropdownRef}>
+        <div className="absolute top-[4rem] right-0 w-1/2 bg-black text-white md:hidden" ref={dropdownRef}>
           <a
             href="#about"
             onClick={() => handleLinkClick('about')}
