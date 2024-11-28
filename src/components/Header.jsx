@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import talogo from '/public/img/Logo/talogo.png';
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeLink, setActiveLink] = useState('');
@@ -28,17 +29,21 @@ function Header() {
     };
   }, [dropdownRef]);
 
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
+  const handleLinkClick = (sectionId) => {
+    setActiveLink(sectionId);
     setIsOpen(false);
+
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <header className='bg-slate-200 md:bg-transparent relative md:mb-10'>
-      <div className="flex justify-between items-center py-4 px-4   sm:pl-20">
+      <div className="flex justify-between items-center py-4 px-4 sm:pl-20">
         <div className="flex justify-center">
-        <img className='w-16 h-15 sm:w-42 sm:h-35' src={talogo} alt="Logo" />
-          
+          <img className='w-16 h-15 sm:w-42 sm:h-35' src={talogo} alt="Logo" />
         </div>
         <div className="md:hidden">
           <button ref={menuButtonRef} onClick={toggleMenu} className="focus:outline-none">
@@ -49,37 +54,32 @@ function Header() {
         </div>
 
         <div className="hidden md:flex md:justify-center w-2/5">
-          <a href="#about" className="text-white pr-5 hover:text-gray-700">About</a>
-          <a href="#projects" className="text-white pr-5 hover:text-gray-700">Projects</a>
-          <a href="#contact" className="text-white pr-5 hover:text-gray-700">Contact</a>
-          <a href="#contact" className="text-white  hover:text-gray-700">Contact</a>
+          <button onClick={() => handleLinkClick('about')} className="text-white pr-5 hover:text-gray-700">About</button>
+          <button onClick={() => handleLinkClick('projects')} className="text-white pr-5 hover:text-gray-700">Projects</button>
+          <button onClick={() => handleLinkClick('contact')} className="text-white hover:text-gray-700">Contact</button>
         </div>
       </div>
 
-
       {isOpen && (
         <div className="absolute top-[4rem] right-0 w-1/2 bg-black text-white md:hidden" ref={dropdownRef}>
-          <a
-            href="#about"
+          <button
             onClick={() => handleLinkClick('about')}
             className={`block py-2 px-4 hover:bg-gray-700 ${activeLink === 'about' ? 'underline decoration-white' : ''}`}
           >
             About
-          </a>
-          <a
-            href="#projects"
+          </button>
+          <button
             onClick={() => handleLinkClick('projects')}
             className={`block py-2 px-4 hover:bg-gray-700 ${activeLink === 'projects' ? 'underline decoration-white' : ''}`}
           >
             Projects
-          </a>
-          <a
-            href="#contact"
+          </button>
+          <button
             onClick={() => handleLinkClick('contact')}
             className={`block py-2 px-4 hover:bg-gray-700 ${activeLink === 'contact' ? 'underline decoration-white' : ''}`}
           >
             Contact
-          </a>
+          </button>
         </div>
       )}
     </header>

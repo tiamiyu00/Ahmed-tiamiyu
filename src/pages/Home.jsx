@@ -63,10 +63,10 @@ function Home() {
                     </div>
                 </div>
                 <div className="bg-black md:mr-11 md:bg-transparent flex justify-center mt-4 md:flex md:justify-end md:mt-0 md:mb-2 md:w-4/6">
-                    <img className='w-60' src={image} alt="Profile" />
+                    <img className='w-60 md:pt-5' src={image} alt="Profile" />
                 </div>
             </div>
-                <div className="px-12 md:mx-8 md:mt-20 mt-8">
+                <div className="px-12 md:mx-8  md:mt-20 mt-8">
                     <div className="pt-14 md:pt-14 flex justify-center mb-8">
                         <h1 className="p-2 border-4 border-black font-bold tracking-widest">WEB3 Enthusiast</h1>
                     </div>
@@ -119,33 +119,44 @@ function Home() {
   </div>
 </div>
 
-            <div className="py-6 px-14 mt-12 sm:mx-20">
-                <div className="flex justify-center">
-                    <h1 className='p-2 sm:mt-20 border-4 border-black font-bold tracking-widest'>ABOUT ME</h1>
-                </div>
-                <p className='py-5'>
-                    My name is Tiamiyu Olamide Ahmed. I'm a final-year Accounting student.
-                    I've been into web and software development for a decade now, and this
-                    time has been enough to confirm my place in the industry.
-                </p>
-                <div className="my-2 flex justify-center">
-                    <img src={black} alt="Separator" />
-                </div>
-            </div>
-            <div className="py-6 px-14 mt-12 sm:mx-20">
-                <div className="flex justify-center">
-                    <h1 className='p-2 sm:mt-20 border-4 border-black font-bold tracking-widest'>ABOUT ME</h1>
-                </div>
-                <p className='py-5'>
-                    My name is Tiamiyu Olamide Ahmed. I'm a final-year Accounting student.
-                    I've been into web and software development for a decade now, and this
-                    time has been enough to confirm my place in the industry.
-                </p>
-                <div className="my-2 flex justify-center">
-                    <img src={black} alt="Separator" />
-                </div>
-            </div>
-        </div>
+<div id="about" className="py-6 px-14 mt-12 sm:mx-20">
+  <div className="flex justify-center">
+    <h1 className='p-2 sm:mt-20 border-4 border-black font-bold tracking-widest'>ABOUT ME</h1>
+  </div>
+  <p className='py-5'>
+    My name is Tiamiyu Olamide Ahmed. I'm a final-year Accounting student.
+    I've been into web and software development for a decade now, and this
+    time has been enough to confirm my place in the industry.
+  </p>
+  <div className="my-2 flex justify-center">
+    <img src={black} alt="Separator" />
+  </div>
+</div>
+
+<div id="projects" className="py-10 px-4">
+  <div className="grid gap-8 md:mx-10">
+    {/* Your portfolio items here */}
+  </div>
+</div>
+<div className="py-6 px-8 sm:px-20 mt-12">
+  <div className="text-center">
+    <h1 className="p-4 sm:mt-10 border-4 border-black font-bold text-lg tracking-widest uppercase">
+      Contact Me
+    </h1>
+    <p className="py-5 text-gray-700 leading-relaxed">
+      I’m always happy to connect with like-minded professionals, collaborate on exciting projects, or answer questions about Web3 and front-end development. Reach out through any of the channels below, and I’ll respond promptly!
+    </p>
+  </div>
+  </div>
+                        <div className="flex py-2 md:px-5 md:py-4 space-x-4">
+                            <a href=""> <img className='icon w-11' src={gitlink} alt="GitHub" /></a>
+                            <a href=""> <img className='icon w-11' src={linkdinLink} alt="LinkedIn" /></a>
+                            <a href=""> <img className='icon w-11' src={xLink} alt="X" /></a>
+                            <a href=""> <img className='icon w-11' src={emailLink} alt="Email" /></a>
+                        </div>
+                    </div>
+
+        
     );
 }
 
